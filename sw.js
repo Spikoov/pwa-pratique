@@ -28,6 +28,7 @@ self.addEventListener('activate', (evt) => {
     console.log(`sw activé à ${new Date().toLocaleTimeString()}`);    
 });
 
+
 self.addEventListener('fetch', (evt) => {
     // 3.4
     if(!navigator.onLine) {
