@@ -29,3 +29,23 @@ if(navigator.serviceWorker) {
         .register('sw.js')
         .catch(err => console.error('service worker NON enregistré', err));
 }
+
+//7.1 Notifications non persistantes
+// // Vérifie si la fonctionalité est disponible et si 
+// l'utilisateur n'a pas refusé les notifications
+if(window.Notification && window.Notification !== "denied"){
+    // demande une permission
+    Notification.requestPermission(perm => {
+        // vérifie si la permission est acceptée par l'utilisateur
+        // 3 valeurs possibles : default | granted | denied
+        if(perm === "granted"){
+          	console.log("Notification acceptée");
+            // On crée une nouvelle notification
+            const notif = new Notification("Hello notification");
+        }
+        else{
+            // Notification refusée
+            console.log("Notification refusée");
+        }
+    })
+}
