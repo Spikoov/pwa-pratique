@@ -2,7 +2,8 @@ console.log("hello depuis main");
 const technosDiv = document.querySelector('#technos');
 
 function loadTechnologies(technos) {
-    fetch('http://localhost:3001/technos')
+    //fetch('http://localhost:3001/technos')
+    fetch('https://us-central1-pwa-technos-spikoov.cloudfunctions.net/getTechnos')
         .then(response => {
             response.json()
                 .then(technos => {
@@ -102,7 +103,6 @@ function extractKeysFromArrayBuffer(subscription){
     console.log('p256dh key :', p256dh);
     console.log('auth key :', auth);
 }
-
 /*7.1 Notifications non persistantes
 // // Vérifie si la fonctionalité est disponible et si 
 // l'utilisateur n'a pas refusé les notifications
