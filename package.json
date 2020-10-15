@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/Spikoov/pwa-pratique/issues"
   },
-  "homepage": "https://github.com/Spikoov/pwa-pratique#readme"
+  "homepage": "https://github.com/Spikoov/pwa-pratique#readme",
+  "dependencies": {
+    "g": "^2.0.1",
+    "web-push": "^3.4.4"
+  }
 }
